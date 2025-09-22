@@ -1,0 +1,145 @@
+/* ========== Global Styles ========== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: #f8f9fa;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+h1, h2, h3 {
+  color: #1b5e20;
+}
+
+/* ========== Navbar ========== */
+nav {
+  background: #2e7d32;
+  color: #fff;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ========== Hero Section ========== */
+.hero {
+  background: url('img/samarinda-hero.jpg') center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  background: rgba(0,0,0,0.5);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+/* ========== Cards (Wisata & Kuliner) ========== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+/* ========== Buttons ========== */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-primary {
+  background: #2e7d32;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #1b5e20;
+}
+
+/* ========== Footer ========== */
+footer {
+  text-align: center;
+  background: #2e7d32;
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
