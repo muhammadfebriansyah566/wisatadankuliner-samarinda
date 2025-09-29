@@ -143,3 +143,22 @@ footer {
     align-items: center;
   }
 }
+
+/* Dark Mode */
+.dark-mode {
+  background: #222;
+  color: #f1f1f1;
+}
+
+.dark-mode nav {
+  background: #111;
+}
+
+.dark-mode .card {
+  background: #333;
+  color: #f1f1f1;
+}
+
+.dark-mode footer {
+  background: #111;
+}
