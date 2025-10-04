@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -13,6 +14,12 @@
       <li><a href="#wisata">Wisata</a></li>
       <li><a href="#kuliner">Kuliner</a></li>
       <li><a href="#tentang">Tentang</a></li>
+      <?php if (isset($_SESSION['username'])): ?>
+        <li><a href="dashboard.php">Dashboard</a></li>
+        <li><a href="logout.php">Logout</a></li>
+      <?php else: ?>
+        <li><a href="login.php">Login</a></li>
+      <?php endif; ?>
     </ul>
   </nav>
 
@@ -31,7 +38,7 @@
           <div class="card-content">
             <h3>Jembatan Mahakam</h3>
             <p>Ikon kota Samarinda yang megah, cocok untuk menikmati pemandangan sungai Mahakam.</p>
-            <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+            <a href="detail.php?tempat=Jembatan Mahakam" class="btn btn-primary">Lihat Selengkapnya</a>
           </div>
         </div>
         <div class="card">
@@ -39,7 +46,7 @@
           <div class="card-content">
             <h3>Islamic Center Samarinda</h3>
             <p>Masjid terbesar di Kalimantan Timur dengan arsitektur megah dan menawan.</p>
-            <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+            <a href="detail.php?tempat=Islamic Center Samarinda" class="btn btn-primary">Lihat Selengkapnya</a>
           </div>
         </div>
       </div>
@@ -54,7 +61,7 @@
           <div class="card-content">
             <h3>Nasi Bekepor</h3>
             <p>Makanan khas Samarinda yang kaya rempah, biasanya disajikan dengan ikan asin.</p>
-            <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+            <a href="detail.php?tempat=Nasi Bekepor" class="btn btn-primary">Lihat Selengkapnya</a>
           </div>
         </div>
         <div class="card">
@@ -62,7 +69,7 @@
           <div class="card-content">
             <h3>Amplang</h3>
             <p>Camilan khas berupa kerupuk ikan tenggiri yang gurih dan renyah.</p>
-            <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+            <a href="detail.php?tempat=Amplang Samarinda" class="btn btn-primary">Lihat Selengkapnya</a>
           </div>
         </div>
       </div>
@@ -81,7 +88,6 @@
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Wisata & Kuliner Samarinda | Dibuat untuk Post Test</p>
-    <p>Referensi desain: <a href="https://www.youtube.com/watch?v=7zWsw3yBxtw" target="_blank">Belajar CSS Responsive</a></p>
   </footer>
   
   <script src="script.js"></script>
